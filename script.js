@@ -32,19 +32,20 @@ const addTransaction = e => {
       amount: +amount.value,
     };
 
-    transaction.push(transaction);
-
     transactions.push(transaction);
 
     addTransactionDOM(transaction);
 
     updateValues();
 
-    updateLocalStorage();
-
     text.value = '';
     amount.value = '';
   }
+};
+
+// Generate random ID
+const generateID = () => {
+  return Math.floor(Math.random() * 100000000);
 };
 
 // Add transactions to DOM list
@@ -100,3 +101,5 @@ const init = () => {
 };
 
 init();
+
+form.addEventListener('submit', addTransaction);
