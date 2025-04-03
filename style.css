@@ -111,7 +111,7 @@ input[type='number'] {
   margin-bottom: 40px;
 }
 
-.tracker__list-item {
+.tracker__list > li {
   background-color: #fff;
   box-shadow: var(--box-shadow);
   color: #333;
@@ -122,11 +122,11 @@ input[type='number'] {
   margin: 10px 0;
 }
 
-.tracker__list-item.tracker__money--plus {
+.tracker__list > li.tracker__money--plus {
   border-right: 5px solid #2ecc71;
 }
 
-.tracker__list-item.tracker__money--minus {
+.tracker__list > li.tracker__money--minus {
   border-right: 5px solid #c0392b;
 }
 
@@ -146,6 +146,6 @@ input[type='number'] {
   transition: opacity 0.3s ease;
 }
 
-.tracker__list-item:hover .tracker__delete-btn {
+.tracker__list > li:hover .tracker__delete-btn {
   opacity: 1;
 }
