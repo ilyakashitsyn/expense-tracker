@@ -92,6 +92,13 @@ const updateValues = () => {
   money_minus.innerText = `$${expense}`;
 };
 
+// Remove transaction by ID
+const removeTransaction = id => {
+  transactions = transactions.filter(transaction => transaction.id !== id);
+
+  init();
+};
+
 // Init app
 const init = () => {
   list.innerHTML = '';
